@@ -40,6 +40,6 @@ public class DiceManager : MonoBehaviour
     {
         int dieFace = Random.Range(0, 6);
 
-        Instantiate(fallingDies[dieFace], dropPos, player.transform.rotation);
+        Instantiate(fallingDies[dieFace], new Vector3 (dropPos.x, dropPos.y + 2, dropPos.z), player.transform.rotation);
     }
 }

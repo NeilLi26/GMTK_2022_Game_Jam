@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FallingDice : MonoBehaviour
 {
+    // gameobjects
     public GameObject shadow;
     public GameObject dice;
     public DiceManager diceManager;
@@ -11,6 +12,13 @@ public class FallingDice : MonoBehaviour
 
     private BoxCollider2D boxCollider;
 
+    // animatiosn
+    /*
+    public Animation shadowGrowing;
+    public Animation diceFalling;
+    */
+    public Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +28,14 @@ public class FallingDice : MonoBehaviour
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
         boxCollider.enabled = false;
 
+        //getting animations
+        animator = gameObject.GetComponent<Animator>();
+
+        /*
         shadow.SetActive(true);
+        */
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
 
         Invoke("DropDice", 1 + (((float) dieFace)/2));
     }
@@ -28,16 +43,19 @@ public class FallingDice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void DropDice()
     {
+        animator.SetBool("Dropped", true);
+        spriteRenderer.sortingOrder = 6;
+        /*
         shadow.SetActive(false);
         dice.SetActive(true);
+        */
         boxCollider.enabled = true;
 
-        Invoke("DespawnDice", 0.5f);
+        Invoke("DespawnDice", 1f);
     }
 
     void DespawnDice()
