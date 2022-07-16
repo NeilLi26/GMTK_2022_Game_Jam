@@ -25,7 +25,7 @@ public class FillSliderBar : MonoBehaviour
         {
             fillImage.enabled = true;
         }
-        float fillValue = playerHealth.currentHealth / playerHealth.maxHealth;
+        float fillValue = playerHealth.currHealth / playerHealth.maxHealth;
         if (slider.value <= slider.maxValue / 2)
         {
             fillImage.color = Color.red;   // for a change in color
