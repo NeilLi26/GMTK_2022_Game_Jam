@@ -9,12 +9,16 @@ public class FallingDice : MonoBehaviour
     public DiceManager diceManager;
     public int dieFace;
 
+    private BoxCollider2D boxCollider;
+
 
     // Start is called before the first frame update
     void Start()
     {
         shadow = transform.Find("Shadow").gameObject;
         dice = transform.Find("Dice").gameObject;
+        boxCollider = gameObject.GetComponent<BoxCollider2D>();
+        boxCollider.enabled = false;
 
         shadow.SetActive(true);
 
@@ -31,6 +35,7 @@ public class FallingDice : MonoBehaviour
     {
         shadow.SetActive(false);
         dice.SetActive(true);
+        boxCollider.enabled = true;
 
         Invoke("DespawnDice", 0.5f);
     }
@@ -40,5 +45,12 @@ public class FallingDice : MonoBehaviour
         dice.SetActive(false);
         diceManager.DiceFallen();
         Destroy(gameObject);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //Debug.Log("hit");
+        PlayerHealth ph = collision.GetComponent<PlayerHealth>();
+        ph.TakeDamage(dieFace);
     }
 }

@@ -6,7 +6,10 @@ public class PlayerHealth : MonoBehaviour {
     [SerializeField] public float maxHealth;
     public float currHealth;
 
+    public bool Invincible;
+
     void Start() {
+        Invincible = false;
         currHealth = maxHealth;
     }
 
@@ -35,12 +38,16 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     public void TakeDamage(float damage) {
-        Debug.Log("oh no took damage");
-        currHealth -= damage;
-        currHealth = Mathf.Clamp(currHealth, 0, maxHealth);
-        Debug.Log(currHealth);
+        if (!Invincible)
+        {
+            Debug.Log("oh no took damage");
+            currHealth -= damage;
+            currHealth = Mathf.Clamp(currHealth, 0, maxHealth);
+            Debug.Log(currHealth);
 
-        //TODO: animation for taking damage?
+            //TODO: animation for taking damage?
+            StartIFrame();
+        }
     }
 
     public void Heal(float amount) {
@@ -53,4 +60,16 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     // TODO: iframe
+    public void StartIFrame()
+    {
+        Debug.Log(Invincible);
+        // TODO: invincible animation
+        Invincible = true;
+        Invoke("EndIFrame", 1);
+    }
+
+    void EndIFrame()
+    {
+        Invincible = false ;
+    }
 }
