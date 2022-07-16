@@ -23,11 +23,4 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.up * speed * verticalInput * Time.deltaTime);
     }
-
-    public void RegisterHit()
-    {
-        Debug.Log("WE DID IT");
-    }
-
-    
 }

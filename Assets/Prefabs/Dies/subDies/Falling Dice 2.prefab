@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3374053422165071091}
   - component: {fileID: 3374053422165071090}
-  - component: {fileID: 635462599684387815}
-  - component: {fileID: 6984570382939818122}
   m_Layer: 0
   m_Name: Falling Dice 2
   m_TagString: Untagged
@@ -51,53 +49,6 @@ MonoBehaviour:
   dice: {fileID: 9210144350931336713, guid: c96549e5c03c0834485af85ed553a885, type: 3}
   diceManager: {fileID: 0}
   dieFace: 2
---- !u!61 &635462599684387815
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3374053422165071089}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!50 &6984570382939818122
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3374053422165071089}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &781590278537193153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222,10 +173,6 @@ PrefabInstance:
     - target: {fileID: 3879428633360311218, guid: 93bf5b896cbd51e4e854301f2f4c78d9, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3879428633360311219, guid: 93bf5b896cbd51e4e854301f2f4c78d9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93bf5b896cbd51e4e854301f2f4c78d9, type: 3}
