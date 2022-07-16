@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
         Vector2 move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         body.velocity = move * movementSpeed;
 
-        // TODO: flip sprite depending on orientation
+        // flips the sprite depending on orientation
         if (Input.GetAxis("Horizontal") < 0) {
             transform.localScale = new Vector3(-1, 1, transform.position.z);
         } else if (Input.GetAxis("Horizontal") > 0) {
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour {
         animator.SetBool("isMoving", body.velocity != Vector2.zero);
     }
 
-    // player moves in direction of mouse
+    // player dashes in direction of mouse
     private void Dash() {
         Vector2 playerPosition = transform.position;
         Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);

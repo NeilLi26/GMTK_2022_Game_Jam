@@ -9,9 +9,14 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private Camera camera;
     [SerializeField] private float attackDistance;
+    [SerializeField] private GameObject boomerangObject;
+    private Boomerang boomerang;
+    //[SerializeField] private float boomerangSpeed;
+    //[SerializeField] private float boomerangSmoothing;
 
     // Start is called before the first frame update
     void Start() {
+        boomerangObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,6 +24,9 @@ public class PlayerAttack : MonoBehaviour {
         // TODO: switch key if needed
         if (Input.GetKeyDown(KeyCode.Space)) {
             MeleeAttack();
+        }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            Boomerang();
         }
 
         // TODO: if something, ranged attack
@@ -42,6 +50,12 @@ public class PlayerAttack : MonoBehaviour {
             Debug.Log("hit enemy");
         }
         
+    }
+
+    private void Boomerang() {
+        boomerangObject.SetActive(true);
+        boomerang = boomerangObject.GetComponent<Boomerang>();
+        StartCoroutine(boomerang.boomerangAttack());
     }
 
     // TODO: remove after testing
