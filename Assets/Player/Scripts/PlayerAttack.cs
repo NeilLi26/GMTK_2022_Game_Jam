@@ -41,6 +41,7 @@ public class PlayerAttack : MonoBehaviour {
             // TODO: damage enemy
             Debug.Log("hit enemy");
         }
+        
     }
 
     // TODO: remove after testing
