@@ -49,8 +49,12 @@ public class FallingDice : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //Debug.Log("hit");
-        PlayerHealth ph = collision.GetComponent<PlayerHealth>();
-        ph.TakeDamage(dieFace);
+        if (collision.CompareTag("Player") || collision.CompareTag("Enemy"))
+        {
+            //Debug.Log("hit");
+            PlayerHealth ph = collision.GetComponent<PlayerHealth>();
+            ph.TakeDamage(dieFace);
+        }
+        
     }
 }
