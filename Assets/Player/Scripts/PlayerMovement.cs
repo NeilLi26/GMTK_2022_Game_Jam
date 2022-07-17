@@ -21,8 +21,9 @@ public class PlayerMovement : MonoBehaviour {
     void Update() {
         Move();
 
-        // dash if right click
-        if (Input.GetMouseButtonDown(1)) {
+        // left shift for dash
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            Debug.Log("left shift");
             Dash();
         }
     }
