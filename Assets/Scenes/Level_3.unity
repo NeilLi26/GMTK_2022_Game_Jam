@@ -371,6 +371,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 824169302141917970, guid: fd77bdc07d3cba14d81ff61a5c467025, type: 3}
+      propertyPath: deathMenu
+      value: 
+      objectReference: {fileID: 645784991}
     - target: {fileID: 824169302141917972, guid: fd77bdc07d3cba14d81ff61a5c467025, type: 3}
       propertyPath: camera
       value: 
@@ -14372,6 +14376,17 @@ PrefabInstance:
       objectReference: {fileID: 1815078849}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de9edb86f8a4dad48a8ab9b60f721093, type: 3}
+--- !u!114 &645784991 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4854680398112826687, guid: de9edb86f8a4dad48a8ab9b60f721093, type: 3}
+  m_PrefabInstance: {fileID: 645784990}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6b77254c9c9264089efe3e524ab063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &654395595
 GameObject:
   m_ObjectHideFlags: 0

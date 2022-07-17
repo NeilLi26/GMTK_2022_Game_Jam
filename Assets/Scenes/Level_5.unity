@@ -713,6 +713,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7279843181442572692, guid: 8d7ac2e226eb6b745b7c686a14488bbf, type: 3}
   m_PrefabInstance: {fileID: 245687993}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &252748646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4854680398112826687, guid: de9edb86f8a4dad48a8ab9b60f721093, type: 3}
+  m_PrefabInstance: {fileID: 1680986967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6b77254c9c9264089efe3e524ab063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &252983660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18355,7 +18366,7 @@ PrefabInstance:
     - target: {fileID: 449524220365006172, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: deathMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 252748646}
     - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: camera
       value: 
