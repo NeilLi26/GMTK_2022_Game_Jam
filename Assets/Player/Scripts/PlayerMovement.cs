@@ -6,13 +6,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float movementSpeed;
     [SerializeField] private float dashSpeed;
-    private SpriteRenderer sprite;
     private Animator animator;
     private Rigidbody2D body;
     public Camera camera;
 
     void Start() {
-        sprite = GetComponent<SpriteRenderer>();
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         body.isKinematic = false;
@@ -23,7 +21,6 @@ public class PlayerMovement : MonoBehaviour {
 
         // left shift for dash
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
-            Debug.Log("left shift");
             Dash();
         }
     }

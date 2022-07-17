@@ -14,7 +14,7 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField] private GameObject meleeWeapon;
     private Animator meleeAnimator;
     private float timer;
-    // Start is called before the first frame update
+
     void Start() {
         timer = Mathf.Infinity;
         meleeAnimator = meleeWeapon.GetComponent<Animator>();

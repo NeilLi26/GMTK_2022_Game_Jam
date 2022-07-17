@@ -25,7 +25,6 @@ public class PlayerHealth : MonoBehaviour {
 
     private void Die() {
         isDead = true;
-        //TODO: set death animation here, wait time, then deathMenu
         anim.SetTrigger("isDead");
         GetComponent<PlayerMovement>().enabled = false;
         StartCoroutine(Wait());
@@ -60,6 +59,7 @@ public class PlayerHealth : MonoBehaviour {
         // TODO: invincible animation
         Invincible = true;
         Invoke("EndIFrame", 1);
+
     }
 
     void EndIFrame()
