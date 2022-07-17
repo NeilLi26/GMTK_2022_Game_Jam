@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  boomerangSpeed: 0.1
-  maxTime: 2
+  boomerangSpeed: 5
+  maxTime: 1
   attackRange: 0.16
   enemyLayer:
     serializedVersion: 2
