@@ -12990,7 +12990,7 @@ PrefabInstance:
     - target: {fileID: 449524220365006170, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2035997990}
     - target: {fileID: 449524220365006172, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: deathMenu
       value: 
@@ -14365,7 +14365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46f2ed94ce8c4544a285620d7d1bc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  camera: {fileID: 2035997990}
   boomerang: {fileID: 1296294988609892509, guid: 461e3873067f5d3488b44f10aadea8fa, type: 3}
   shootingPoint: {fileID: 1827795422}
   boomerangForce: 5
@@ -17431,6 +17431,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6b77254c9c9264089efe3e524ab063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &2035997990 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4041845894882301478, guid: 30fb8f5a72ab6334f9f99c4e7dc2de87, type: 3}
+  m_PrefabInstance: {fileID: 468561612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2046832930
 GameObject:
   m_ObjectHideFlags: 0
