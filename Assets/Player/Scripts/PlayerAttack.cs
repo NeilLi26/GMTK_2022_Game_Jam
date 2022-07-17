@@ -39,7 +39,7 @@ public class PlayerAttack : MonoBehaviour {
 
     // melee attack in the direction of mouse position
     private void MeleeAttack() {
-        // TODO: play melee attack animation
+        // play melee attack animation
         meleeAnimator.SetTrigger("isAttacking");
 
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
