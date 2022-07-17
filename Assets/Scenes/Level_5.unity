@@ -1283,6 +1283,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7339546425700169358, guid: f7211a2651d91134d9f31ae970c127e4, type: 3}
   m_PrefabInstance: {fileID: 490117956}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &507587857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 449524220365006172, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+  m_PrefabInstance: {fileID: 2084141175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7ca25ad1675864bb41eb657b546504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &518337532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17463,6 +17474,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4562893660659627971, guid: de9edb86f8a4dad48a8ab9b60f721093, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 507587857}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de9edb86f8a4dad48a8ab9b60f721093, type: 3}
 --- !u!4 &1680986968 stripped
@@ -18341,6 +18356,10 @@ PrefabInstance:
       propertyPath: deathMenu
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1181757589}
     - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: meleeWeapon
       value: 
