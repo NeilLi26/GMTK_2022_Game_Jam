@@ -11,10 +11,13 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField] private float attackDistance;
     [SerializeField] private float boomerangCD;
     [SerializeField] private RangedWeapon rangedWeapon;
+    [SerializeField] private GameObject meleeWeapon;
+    private Animator meleeAnimator;
     private float timer;
     // Start is called before the first frame update
     void Start() {
         timer = Mathf.Infinity;
+        meleeAnimator = meleeWeapon.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,7 +29,6 @@ public class PlayerAttack : MonoBehaviour {
         }
         // right click for ranged attack
         if (Input.GetMouseButtonDown(1)) {
-            Debug.Log("rightclick");
             if (timer > boomerangCD) {
                 rangedWeapon.Throw();
                 timer = 0;
@@ -38,16 +40,9 @@ public class PlayerAttack : MonoBehaviour {
     // melee attack in the direction of mouse position
     private void MeleeAttack() {
         // TODO: play melee attack animation
+        meleeAnimator.SetTrigger("isAttacking");
 
-
-        Vector3 playerPosition = transform.position;
-        Vector3 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
-
-        Vector3 playerToMouse = new Vector3(mousePosition.x - playerPosition.x, mousePosition.y - playerPosition.y, playerPosition.z);
-        playerToMouse = playerToMouse.normalized;
-        playerToMouse *= attackDistance;
-
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position + playerToMouse, attackRange, enemyLayer);
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
         foreach(Collider2D enemy in enemies) {
             // TODO: damage enemy
             Debug.Log("hit enemy");

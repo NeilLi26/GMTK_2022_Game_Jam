@@ -32,7 +32,6 @@ public class PlayerHealth : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
-            // TODO: update this value?
             TakeDamage(1);
         }
     }
@@ -40,10 +39,8 @@ public class PlayerHealth : MonoBehaviour {
     public void TakeDamage(float damage) {
         if (!Invincible)
         {
-            Debug.Log("oh no took damage");
             currHealth -= damage;
             currHealth = Mathf.Clamp(currHealth, 0, maxHealth);
-            Debug.Log(currHealth);
 
             //TODO: animation for taking damage?
             StartIFrame();
@@ -51,12 +48,9 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     public void Heal(float amount) {
-        Debug.Log("healing :3");
         currHealth += amount;
         currHealth = Mathf.Clamp(currHealth, 0, maxHealth);
         Debug.Log(currHealth);
-
-        // TODO: animation for healing?
     }
 
     public void StartIFrame()

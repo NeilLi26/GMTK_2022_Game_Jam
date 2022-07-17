@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1086686726}
-  boomerang: {fileID: 5983362814443683952, guid: 461e3873067f5d3488b44f10aadea8fa, type: 3}
+  boomerang: {fileID: 1296294988609892509, guid: 461e3873067f5d3488b44f10aadea8fa, type: 3}
   shootingPoint: {fileID: 1467652810}
   boomerangForce: 5
 --- !u!4 &1651804887 stripped
@@ -751,6 +751,14 @@ PrefabInstance:
     - target: {fileID: 449524220083885169, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 449524220083885182, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.203
+      objectReference: {fileID: 0}
+    - target: {fileID: 449524220083885182, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.008
       objectReference: {fileID: 0}
     - target: {fileID: 449524220365006160, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: m_SortingOrder
@@ -824,6 +832,10 @@ PrefabInstance:
       propertyPath: boomerang
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: meleeWeapon
+      value: 
+      objectReference: {fileID: 1743597881}
     - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: rangedWeapon
       value: 
