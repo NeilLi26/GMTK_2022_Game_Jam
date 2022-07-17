@@ -9,13 +9,11 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private Camera camera;
     [SerializeField] private float attackDistance;
-    [SerializeField] private GameObject boomerangObject;
-    private Boomerang boomerang;
     [SerializeField] private float boomerangCD;
+    [SerializeField] private RangedWeapon rangedWeapon;
     private float timer;
     // Start is called before the first frame update
     void Start() {
-        boomerangObject.SetActive(false);
         timer = Mathf.Infinity;
     }
 
@@ -30,7 +28,7 @@ public class PlayerAttack : MonoBehaviour {
         if (Input.GetMouseButtonDown(1)) {
             Debug.Log("rightclick");
             if (timer > boomerangCD) {
-                Boomerang();
+                rangedWeapon.Throw();
                 timer = 0;
             }
         }
@@ -55,13 +53,6 @@ public class PlayerAttack : MonoBehaviour {
             Debug.Log("hit enemy");
         }
         
-    }
-
-    private void Boomerang() {
-        boomerangObject.transform.position = transform.position;
-        boomerangObject.SetActive(true);
-        boomerang = boomerangObject.GetComponent<Boomerang>();
-        StartCoroutine(boomerang.boomerangAttack());
     }
 
     // TODO: remove after testing

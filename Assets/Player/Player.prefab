@@ -154,7 +154,8 @@ MonoBehaviour:
   camera: {fileID: 0}
   attackDistance: 0.2
   boomerangObject: {fileID: 0}
-  boomerangCD: 1.5
+  boomerangCD: 0.2
+  rangedWeapon: {fileID: 0}
 --- !u!114 &449524220365006172
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Boomerang : MonoBehaviour {
-    [SerializeField] private Transform player;
-    [SerializeField] private float boomerangSpeed;
     [SerializeField] private float maxTime;
     [SerializeField] private float attackRange;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private LayerMask playerLayer;
-    public Camera camera;
     private bool hasHit;
     private float lifetime;
 
@@ -20,12 +17,13 @@ public class Boomerang : MonoBehaviour {
 
     private void Update() {
         if (hasHit || lifetime >= maxTime) {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
             hasHit = false;
             lifetime = 0;
             return;
         }
         CheckForCollisions();
+        lifetime += Time.deltaTime;
 
     }
 
@@ -38,12 +36,14 @@ public class Boomerang : MonoBehaviour {
         }
     }
 
+    /*
     public IEnumerator boomerangAttack() {
+        transform.position = Vector2.zero;
         Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
 
         Vector2 projectileVector = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
         projectileVector = projectileVector.normalized;
-        projectileVector *= 10f;
+        projectileVector *= 5f;
 
         lifetime = 0;
         while (!hasHit && lifetime < maxTime) {
@@ -54,5 +54,6 @@ public class Boomerang : MonoBehaviour {
         }
 
     }
+    */
 
 }
