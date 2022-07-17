@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1086686726}
-  boomerang: {fileID: 5983362814443683952, guid: 461e3873067f5d3488b44f10aadea8fa, type: 3}
+  boomerang: {fileID: 1296294988609892509, guid: 461e3873067f5d3488b44f10aadea8fa, type: 3}
   shootingPoint: {fileID: 1467652810}
   boomerangForce: 5
 --- !u!4 &1651804887 stripped
