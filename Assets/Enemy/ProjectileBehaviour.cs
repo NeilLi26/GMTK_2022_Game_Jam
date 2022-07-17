@@ -26,9 +26,8 @@ public class ProjectileBehaviour : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Player") {
-            Destroy(gameObject);
-        }
+    void onCollisionEnter2D(Collision2D collision) {
+        Debug.Log("hit");
+        Destroy(gameObject);
     }
 }
