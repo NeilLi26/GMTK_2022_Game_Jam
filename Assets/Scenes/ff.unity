@@ -853,7 +853,7 @@ Transform:
   m_Children:
   - {fileID: 1931295373}
   m_Father: {fileID: 629959683}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &459898091
 MonoBehaviour:
@@ -871,6 +871,84 @@ MonoBehaviour:
   boomerang: {fileID: 1296294988609892509, guid: 461e3873067f5d3488b44f10aadea8fa, type: 3}
   shootingPoint: {fileID: 1931295373}
   boomerangForce: 5
+--- !u!1001 &475210271
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 629959683}
+    m_Modifications:
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1377
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0652
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7061973
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7080151
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765584, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.147
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765587, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_Name
+      value: bonkstick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216491110214007314, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 609b3500378344341b1a3416297510b8, type: 2}
+    - target: {fileID: 4216491110214007314, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+--- !u!1 &475210272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2541543428222765587, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+  m_PrefabInstance: {fileID: 475210271}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &492024776
 GameObject:
   m_ObjectHideFlags: 0
@@ -10650,6 +10728,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 449524220365006170, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 25676976}
+    - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: meleeWeapon
+      value: 
+      objectReference: {fileID: 475210272}
     - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: rangedWeapon
       value: 
