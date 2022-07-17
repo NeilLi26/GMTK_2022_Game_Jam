@@ -22482,6 +22482,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1377257730}
     - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 750618171}
+    - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: meleeWeapon
       value: 
       objectReference: {fileID: 1735682875}
