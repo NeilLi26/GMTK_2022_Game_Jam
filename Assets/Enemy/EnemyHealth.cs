@@ -46,7 +46,7 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log(Invincible);
         // TODO: invincible animation
         Invincible = true;
-        Invoke("EndIFrame", 1);
+        Invoke("EndIFrame", 0.5f);
     }
 
     void EndIFrame()
