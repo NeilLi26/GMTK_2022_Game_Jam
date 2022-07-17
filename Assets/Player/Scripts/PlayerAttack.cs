@@ -21,15 +21,17 @@ public class PlayerAttack : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        // TODO: switch key if needed
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        // left click for melee attack
+        if (Input.GetMouseButtonDown(0)) {
+            Debug.Log("left click");
             MeleeAttack();
         }
-        if (Input.GetKeyDown(KeyCode.E)) {
+        // right click for ranged attack
+        if (Input.GetMouseButtonDown(1)) {
+            Debug.Log("rightclick");
             Boomerang();
         }
 
-        // TODO: if something, ranged attack
     }
 
     // melee attack in the direction of mouse position
@@ -63,6 +65,7 @@ public class PlayerAttack : MonoBehaviour {
         if (attackPoint == null) {
             return;
         }
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
