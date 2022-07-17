@@ -8,11 +8,13 @@ public class PlayerHealth : MonoBehaviour {
     [SerializeField] DeathMenu deathMenu;
     public bool Invincible;
     private bool isDead;
+    private Animator anim;
 
     void Start() {
         Invincible = false;
         currHealth = maxHealth;
         isDead = false;
+        anim = GetComponent<Animator>();
     }
 
     void Update() {
@@ -22,12 +24,11 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     private void Die() {
-        // TODO: set death animation and disable object? reset level? game over?
-        Debug.Log("DIE");
         isDead = true;
         //TODO: set death animation here, wait time, then deathMenu
-        Invincible = true;
-        deathMenu.Pause();
+        anim.SetTrigger("isDead");
+        GetComponent<PlayerMovement>().enabled = false;
+        StartCoroutine(Wait());
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -64,5 +65,13 @@ public class PlayerHealth : MonoBehaviour {
     void EndIFrame()
     {
         Invincible = false ;
+    }
+
+    private IEnumerator Wait() {
+        yield return new WaitForSeconds(2f);
+        Debug.Log("reached");
+        Invincible = true;
+        deathMenu.Pause();
+
     }
 }
