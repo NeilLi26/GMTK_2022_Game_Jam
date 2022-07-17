@@ -55,7 +55,7 @@ public class FallingDice : MonoBehaviour
         */
         boxCollider.enabled = true;
 
-        Invoke("DespawnDice", 1f);
+        Invoke("DespawnDice", 0.5f);
     }
 
     void DespawnDice()
