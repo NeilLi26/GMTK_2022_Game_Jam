@@ -32,7 +32,11 @@ public class GameManager : MonoBehaviour
             Debug.Log("Wave number" + waveCounter);
             Debug.Log("Wave total" + Waves.Count);
             */
-            Waves[waveCounter++].SetActive(true);
+            if (waveCounter + 1 > Waves.Count) {
+                SceneManager.LoadScene(nextSceneName);
+            } else {
+                Waves[waveCounter++].SetActive(true);
+            }
         }
         
     }
