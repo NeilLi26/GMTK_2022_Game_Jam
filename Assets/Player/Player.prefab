@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449524220083885182}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,9 +46,9 @@ GameObject:
   - component: {fileID: 449524220365006175}
   - component: {fileID: 449524220365006174}
   - component: {fileID: 449524220365006171}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,9 +153,9 @@ MonoBehaviour:
     m_Bits: 128
   camera: {fileID: 0}
   attackDistance: 0.2
-  boomerangObject: {fileID: 0}
   boomerangCD: 0.2
   rangedWeapon: {fileID: 0}
+  meleeWeapon: {fileID: 0}
 --- !u!114 &449524220365006172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   currHealth: 6
+  deathMenu: {fileID: 0}
   Invincible: 0
 --- !u!50 &449524220365006175
 Rigidbody2D:

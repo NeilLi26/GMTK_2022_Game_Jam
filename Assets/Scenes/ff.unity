@@ -1114,6 +1114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bonkstick
       objectReference: {fileID: 0}
+    - target: {fileID: 2541543428222765587, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4216491110214007314, guid: 9911662ac590dff4e947b8df80c4d1ac, type: 3}
       propertyPath: m_Controller
       value: 
@@ -24853,6 +24857,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 449524220083885169, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 449524220365006160, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -24912,6 +24920,10 @@ PrefabInstance:
     - target: {fileID: 449524220365006163, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 449524220365006163, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 449524220365006170, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: camera

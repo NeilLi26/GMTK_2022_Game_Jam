@@ -24,7 +24,6 @@ public class PlayerAttack : MonoBehaviour {
     void Update() {
         // left click for melee attack
         if (Input.GetMouseButtonDown(0)) {
-            Debug.Log("left click");
             MeleeAttack();
         }
         // right click for ranged attack
@@ -44,8 +43,9 @@ public class PlayerAttack : MonoBehaviour {
 
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
         foreach(Collider2D enemy in enemies) {
-            // TODO: damage enemy
-            Debug.Log("hit enemy");
+            if (enemy.gameObject.tag == "Enemy") {
+                enemy.gameObject.GetComponent<EnemyHealth>().TakeDamage(3);
+            }
         }
         
     }
