@@ -53,3 +53,6 @@ TagManager:
   - name: Trees
     uniqueID: 2893039487
     locked: 0
+  - name: Falling Dice
+    uniqueID: 2978516667
+    locked: 0
