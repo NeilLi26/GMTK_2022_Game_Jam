@@ -46,11 +46,14 @@ public class PlayerMovement : MonoBehaviour {
 
     // player dashes in direction of mouse
     private void Dash() {
+        Vector2 dashVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        /*
         Vector2 playerPosition = transform.position;
         Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
 
         Vector2 dashVector = new Vector2(mousePosition.x - playerPosition.x, mousePosition.y - playerPosition.y);
         dashVector = dashVector.normalized;
+        */
         body.AddForce(dashVector * dashSpeed);
 
         //trigger dash animation
