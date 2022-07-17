@@ -12,6 +12,8 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField] private GameObject boomerangObject;
     private Boomerang boomerang;
     [SerializeField] private float boomerangCD;
+    [SerializeField] private GameObject bonkstickObject;
+    // private Bonkstick bonkstick;
     private float timer;
     // Start is called before the first frame update
     void Start() {
@@ -40,7 +42,6 @@ public class PlayerAttack : MonoBehaviour {
     // melee attack in the direction of mouse position
     private void MeleeAttack() {
         // TODO: play melee attack animation
-
 
         Vector3 playerPosition = transform.position;
         Vector3 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
