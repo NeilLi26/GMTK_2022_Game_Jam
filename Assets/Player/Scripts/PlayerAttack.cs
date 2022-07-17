@@ -60,6 +60,7 @@ public class PlayerAttack : MonoBehaviour {
     private void Boomerang() {
         boomerangObject.transform.position = transform.position;
         boomerangObject.SetActive(true);
+        boomerang = boomerangObject.GetComponent<Boomerang>();
         StartCoroutine(boomerang.boomerangAttack());
     }
 
