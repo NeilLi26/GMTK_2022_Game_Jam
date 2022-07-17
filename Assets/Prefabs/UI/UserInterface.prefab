@@ -128,6 +128,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 3838073363491599595, guid: ee986f04106b3cd4c9142e457576a629, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3838073363491599595, guid: ee986f04106b3cd4c9142e457576a629, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 2180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3838073363491599595, guid: ee986f04106b3cd4c9142e457576a629, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3838073363754231649, guid: ee986f04106b3cd4c9142e457576a629, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -181,6 +193,18 @@ PrefabInstance:
     - target: {fileID: 2934483805872586193, guid: fed37b2b943092b40a9cf07f7cbcaaec, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934483805872586195, guid: fed37b2b943092b40a9cf07f7cbcaaec, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934483805872586195, guid: fed37b2b943092b40a9cf07f7cbcaaec, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 2180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934483805872586195, guid: fed37b2b943092b40a9cf07f7cbcaaec, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 2934483805872586197, guid: fed37b2b943092b40a9cf07f7cbcaaec, type: 3}
       propertyPath: m_Pivot.x
@@ -389,6 +413,22 @@ PrefabInstance:
     - target: {fileID: 5184749686478218609, guid: db43dac68448ad44ebded4e1c82d4ef3, type: 3}
       propertyPath: m_RenderMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184749686478218610, guid: db43dac68448ad44ebded4e1c82d4ef3, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184749686478218610, guid: db43dac68448ad44ebded4e1c82d4ef3, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 2180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184749686478218610, guid: db43dac68448ad44ebded4e1c82d4ef3, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184749687187149200, guid: db43dac68448ad44ebded4e1c82d4ef3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -56.69995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db43dac68448ad44ebded4e1c82d4ef3, type: 3}
