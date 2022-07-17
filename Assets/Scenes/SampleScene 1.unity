@@ -752,6 +752,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 449524220083885182, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.203
+      objectReference: {fileID: 0}
+    - target: {fileID: 449524220083885182, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.008
+      objectReference: {fileID: 0}
     - target: {fileID: 449524220365006160, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -824,6 +832,10 @@ PrefabInstance:
       propertyPath: boomerang
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
+      propertyPath: meleeWeapon
+      value: 
+      objectReference: {fileID: 1743597881}
     - target: {fileID: 449524220365006173, guid: f5492d69f44da6c41ade284e15503a6c, type: 3}
       propertyPath: rangedWeapon
       value: 

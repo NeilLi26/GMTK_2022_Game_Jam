@@ -36,24 +36,4 @@ public class Boomerang : MonoBehaviour {
         }
     }
 
-    /*
-    public IEnumerator boomerangAttack() {
-        transform.position = Vector2.zero;
-        Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
-
-        Vector2 projectileVector = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
-        projectileVector = projectileVector.normalized;
-        projectileVector *= 5f;
-
-        lifetime = 0;
-        while (!hasHit && lifetime < maxTime) {
-            lifetime += Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, projectileVector, boomerangSpeed * Time.deltaTime);
-
-            yield return null;
-        }
-
-    }
-    */
-
 }
