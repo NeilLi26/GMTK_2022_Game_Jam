@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3374053422165071090}
   m_Layer: 0
   m_Name: Falling Dice
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,6 +49,7 @@ MonoBehaviour:
   dice: {fileID: 9210144350931336713, guid: c96549e5c03c0834485af85ed553a885, type: 3}
   diceManager: {fileID: 0}
   dieFace: 0
+  animator: {fileID: 0}
 --- !u!1001 &781590278537193153
 PrefabInstance:
   m_ObjectHideFlags: 0

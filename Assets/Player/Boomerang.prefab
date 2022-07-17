@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &7688005439752530924
 MonoBehaviour:
@@ -122,7 +122,7 @@ MonoBehaviour:
   attackRange: 0.16
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   playerLayer:
     serializedVersion: 2
     m_Bits: 64

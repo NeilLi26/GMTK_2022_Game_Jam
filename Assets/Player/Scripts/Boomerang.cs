@@ -30,9 +30,11 @@ public class Boomerang : MonoBehaviour {
     private void CheckForCollisions() {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
         foreach (Collider2D enemy in enemies) {
-            hasHit = true;
-            // TODO: damage enemy
-            Debug.Log("hit enemy");
+            
+            if (enemy.gameObject.tag == "Enemy") {
+                hasHit = true;
+                enemy.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
+            }
         }
     }
 
