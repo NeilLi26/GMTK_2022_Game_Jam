@@ -5,16 +5,18 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour {
     [SerializeField] public float maxHealth;
     public float currHealth;
-
+    [SerializeField] DeathMenu deathMenu;
     public bool Invincible;
+    private bool isDead;
 
     void Start() {
         Invincible = false;
         currHealth = maxHealth;
+        isDead = false;
     }
 
     void Update() {
-        if (currHealth == 0) {
+        if (currHealth == 0 && !isDead) {
             Die();
         }
     }
@@ -22,7 +24,10 @@ public class PlayerHealth : MonoBehaviour {
     private void Die() {
         // TODO: set death animation and disable object? reset level? game over?
         Debug.Log("DIE");
-
+        isDead = true;
+        //TODO: set death animation here, wait time, then deathMenu
+        Invincible = true;
+        deathMenu.Pause();
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
