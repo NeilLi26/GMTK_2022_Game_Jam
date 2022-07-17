@@ -15,7 +15,7 @@ public class DeathMenu : MonoBehaviour
     }
 
     public void TryAgain() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("ff");
         deathMenu.SetActive(false);
         Time.timeScale = 1f;
     }
