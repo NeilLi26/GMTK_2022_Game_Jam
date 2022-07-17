@@ -647,7 +647,12 @@ MonoBehaviour:
     - Right click to dash to the pointed
     area
 
-    - Left click to shoot'
+    - Space to melee attack
+
+    - E to shoot Boomerang
+
+    - Mouse to
+    Aim'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d825f900e6199bf42b97bedcdec8a237, type: 2}
   m_sharedMaterial: {fileID: 6996428471151283088, guid: d825f900e6199bf42b97bedcdec8a237, type: 2}
