@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour {
     private void Die() {
         isDead = true;
         anim.SetTrigger("isDead");
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<PlayerMovement>().enabled = false;
         StartCoroutine(Wait());
     }
@@ -42,7 +43,9 @@ public class PlayerHealth : MonoBehaviour {
             currHealth -= damage;
             currHealth = Mathf.Clamp(currHealth, 0, maxHealth);
 
-            //TODO: animation for taking damage?
+            if (currHealth != 0) {
+                anim.SetTrigger("isHurt");
+            }
             StartIFrame();
         }
     }
@@ -69,7 +72,6 @@ public class PlayerHealth : MonoBehaviour {
 
     private IEnumerator Wait() {
         yield return new WaitForSeconds(2f);
-        Debug.Log("reached");
         Invincible = true;
         deathMenu.Pause();
 
