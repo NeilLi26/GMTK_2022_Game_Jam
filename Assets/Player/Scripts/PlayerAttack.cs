@@ -11,12 +11,12 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField] private float attackDistance;
     [SerializeField] private GameObject boomerangObject;
     private Boomerang boomerang;
-    //[SerializeField] private float boomerangSpeed;
-    //[SerializeField] private float boomerangSmoothing;
-
+    [SerializeField] private float boomerangCD;
+    private float timer;
     // Start is called before the first frame update
     void Start() {
         boomerangObject.SetActive(false);
+        timer = Mathf.Infinity;
     }
 
     // Update is called once per frame
@@ -29,9 +29,12 @@ public class PlayerAttack : MonoBehaviour {
         // right click for ranged attack
         if (Input.GetMouseButtonDown(1)) {
             Debug.Log("rightclick");
-            Boomerang();
+            if (timer > boomerangCD) {
+                Boomerang();
+                timer = 0;
+            }
         }
-
+        timer += Time.deltaTime;
     }
 
     // melee attack in the direction of mouse position
@@ -55,8 +58,8 @@ public class PlayerAttack : MonoBehaviour {
     }
 
     private void Boomerang() {
+        boomerangObject.transform.position = transform.position;
         boomerangObject.SetActive(true);
-        boomerang = boomerangObject.GetComponent<Boomerang>();
         StartCoroutine(boomerang.boomerangAttack());
     }
 

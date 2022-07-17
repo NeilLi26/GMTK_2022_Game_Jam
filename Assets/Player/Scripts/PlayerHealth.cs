@@ -30,11 +30,6 @@ public class PlayerHealth : MonoBehaviour {
             // TODO: update this value?
             TakeDamage(1);
         }
-        /* TODO: remove this (for testing the healing)
-        if (collision.gameObject.tag == "Heal") {
-            Heal(1);
-        }
-        */
     }
 
     public void TakeDamage(float damage) {
@@ -59,7 +54,6 @@ public class PlayerHealth : MonoBehaviour {
         // TODO: animation for healing?
     }
 
-    // TODO: iframe
     public void StartIFrame()
     {
         Debug.Log(Invincible);

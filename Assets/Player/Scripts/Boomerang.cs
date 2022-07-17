@@ -9,7 +9,6 @@ public class Boomerang : MonoBehaviour {
     [SerializeField] private float attackRange;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private float boomerangDistance;
     public Camera camera;
     private bool hasHit;
     private float lifetime;
@@ -22,10 +21,15 @@ public class Boomerang : MonoBehaviour {
     private void Update() {
         if (hasHit || lifetime >= maxTime) {
             gameObject.SetActive(false);
+            hasHit = false;
+            lifetime = 0;
             return;
         }
+        CheckForCollisions();
 
+    }
 
+    private void CheckForCollisions() {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
         foreach (Collider2D enemy in enemies) {
             hasHit = true;
@@ -35,19 +39,16 @@ public class Boomerang : MonoBehaviour {
     }
 
     public IEnumerator boomerangAttack() {
+        Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
 
-        transform.position = player.transform.position;
-        Vector3 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = transform.position.z;
+        Vector2 projectileVector = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+        projectileVector = projectileVector.normalized;
+        projectileVector *= 10f;
 
         lifetime = 0;
-
         while (!hasHit && lifetime < maxTime) {
             lifetime += Time.deltaTime;
-            Vector3 currentPos = transform.position;
-            float time = Vector3.Distance(currentPos, mousePosition) / (boomerangSpeed) * Time.deltaTime;
-
-            transform.position = Vector3.MoveTowards(currentPos, mousePosition, time);
+            transform.position = Vector2.MoveTowards(transform.position, projectileVector, boomerangSpeed * Time.deltaTime);
 
             yield return null;
         }
