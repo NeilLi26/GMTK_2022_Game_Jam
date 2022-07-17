@@ -7,10 +7,12 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] public float maxHealth;
     public float currHealth;
     public bool Invincible;
+    private Animator anim;
 
     void Start() {
         Invincible = false;
         currHealth = maxHealth;
+        anim = GetComponent<Animator>();
     }
 
     void Update() {
@@ -37,6 +39,7 @@ public class EnemyHealth : MonoBehaviour
             currHealth = Mathf.Clamp(currHealth, 0, maxHealth);
             Debug.Log(currHealth);
 
+            anim.SetTrigger("isDamaged");
             StartIFrame();
         }
     }
@@ -46,7 +49,7 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log(Invincible);
         // TODO: invincible animation
         Invincible = true;
-        Invoke("EndIFrame", 1);
+        Invoke("EndIFrame", 0.5f);
     }
 
     void EndIFrame()
