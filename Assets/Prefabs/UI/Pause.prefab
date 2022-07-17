@@ -1554,12 +1554,12 @@ MonoBehaviour:
 
     - Use WASD or arrow keys to move
 
-    - Right click to
-    dash to the pointed area
+    - Right Click to
+    shoot Boomerang
 
-    - Space to melee attack
+    - Left Click to melee attack
 
-    - E to shoot Boomerang
+    - Left Shift to Sprint
 
     -
     Mouse to Aim'

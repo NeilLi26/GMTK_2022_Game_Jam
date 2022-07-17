@@ -644,15 +644,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: '- Use WASD or arrow keys to move
 
-    - Right click to dash to the pointed
-    area
+    - Right Click to shoot Boomerang
 
-    - Space to melee attack
+    -
+    Left Click to melee attack
 
-    - E to shoot Boomerang
+    - Left Shift to Sprint
 
-    - Mouse to
-    Aim'
+    - Mouse to Aim'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d825f900e6199bf42b97bedcdec8a237, type: 2}
   m_sharedMaterial: {fileID: 6996428471151283088, guid: d825f900e6199bf42b97bedcdec8a237, type: 2}
